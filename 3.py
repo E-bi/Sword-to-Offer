@@ -7,9 +7,9 @@ def findnum1(s):
     if len_s == 0:
         return False
     elif len_s == 1:
-        return s
+        return ss
     else:
-        s.sort()
+        #s.sort() useless
         for index in range(len_s):
             buff_s = s[index+1:]
             if s[index] in buff_s:
