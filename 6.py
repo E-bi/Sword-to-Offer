@@ -16,8 +16,10 @@ class ChainTable(Node):
     def __init__(self):
         self.head = None
         self.length = 0
+
     def isEmpty(self):
         return (self.length == 0)
+        
     def add(self,dataOrNode):
         item = None
         if isinstance(dataOrNode,Node):

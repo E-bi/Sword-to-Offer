@@ -11,4 +11,4 @@ def stage(n):
             met1 = met2
             met2 = met3
         return met3
-print(stage(3))
+print(stage(10))
