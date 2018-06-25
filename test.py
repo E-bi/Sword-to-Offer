@@ -1,5 +1,6 @@
-num_list = ['1','2','3','4','5','6','7','8','9','0']
-a='1234'
-if a[2] in num_list:
-    print(True)
-print(type(a[2]))
+a='abcd efg'
+a=list(a)
+for i in range(len(a)):
+    if a[i] == ' ':
+        a.insert(i,'%20')
+print(a)

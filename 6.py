@@ -1,6 +1,8 @@
 #!/usr/bin/env python
+
 class Node:
     '''
+    定义节点类
     data:数据
     _next:下一个数据
     '''
@@ -173,3 +175,13 @@ for i in range(10):
 print(chainTable.getIndex(1))
 print(chainTable.print_chain())
 #若需按照倒序打印，只需按照列表的倒序打印的方法即可
+
+
+def PrintChain(head):
+    num = []
+    node = head
+    while node:
+        num.append(node)
+        node = node._next
+    return num[::-1]
+print(PrintChain(chainTable.head))

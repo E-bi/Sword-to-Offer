@@ -5,66 +5,22 @@ class Node:
         self.left = None
         self.right = None
 
-class tree:
-    def __init__(self):
-        self.root = None
-    def add(self,data):
-        node = Node(data)
-        if self.root is None:
-            self.root = node
-        else:
-            q = [self.root]
-            while True:
-                pop_node = q.pop(0)
-                if pop_node.left is None:
-                    pop_node.left = node
-                    return 
-                elif pop_node.right is None:
-                    pop_node.right = node
-                    return
-                else:
-                    q.append(pop_node.left)
-                    q.append(pop_node.right)
-    def traverse(self):
-        if self.root is None:
-            return
-        q = [self.root]
-        res = [self.root.data]
-        while q != []:
-            pop_node = q.pop(0)
-            if pop_node.left is not None:
-                q.append(pop_node.left)
-                res.append(pop_node.left.data)
-            if pop_node.right is not None:
-                q.append(pop_node.right)
-                res.append(pop_node.right.data)
-        return res
-    def preorder(self,root):
-        if root is None:
-            return []
-        result = [root.data]
-        left_data = self.preorder(root.left)
-        right_data = self.preorder(root.right)
-        return result + left_data + right_data
-    def midorder(self,root):
-        if root is None:
-            return []
-        result = [root.data]
-        left_data = self.midorder(root.left)
-        right_data = self.midorder(root.right)
-        return left_data + result + right_data
-    def postorder(self,root):
-        if root is None:
-            return []
-        result = [root.data]
-        left_data = self.postorder(root.left)
-        right_data = self.postorder(root.right)
-        return left_data + right_data + result
 
-t = tree()
-for i in range(10):
-    t.add(i)
-print('层序遍历:',t.traverse())
-print('先序遍历:',t.preorder(t.root))
-print('中序遍历:',t.midorder(t.root))
-print('后序遍历:',t.postorder(t.root))
+Preorder = [1,2,4,7,3,5,6,8] #前序遍历
+Inorder = [4,7,2,1,5,3,8,6] #中序遍历
+def ConstructCore(Preorder,Inorder):
+    rootValue = Preorder[0]
+    rootInorder = 0
+    root = Node()
+    root.data = rootValue
+    root.right = None
+    root.left = None
+    #在中序遍历中找到根节点的值
+    while rootInorder < len(Inorder) & Inorder[rootInorder] != rootValue:
+        rootInorder += 1 #求出在中序遍历中根节点出现的位置的长度
+    if rootInorder == len(Inorder):
+        raise Exception("Invalid Input")
+    leftLength = rootInorder #左子树的长度
+    leftPreorderEnd = leftLength #在前序遍历中左子树结束的位置
+    if leftLength > 0 :
+        root.left = ConstructCore(Preorder[1:leftLength+1],Inorder[0])
