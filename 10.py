@@ -1,6 +1,4 @@
 #方法1：
-
-
 def fib_fir(n):
     if n <= 0:
         return 0
@@ -8,8 +6,6 @@ def fib_fir(n):
         return 1
     else:
         return fib_fir(n-1)+fib_fir(n-2)
-
-
 #方法2
 def fib_sec(n):
     if n <= 0:
@@ -24,6 +20,6 @@ def fib_sec(n):
             fib0 = fib1
             fib1 = fib2
         return fib2
-n=10
+n=100
 print(fib_fir(n))
 print(fib_sec(n))
