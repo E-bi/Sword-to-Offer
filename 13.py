@@ -1,0 +1,3 @@
+def movingCount():
+    pass
+    

@@ -1,3 +1,4 @@
+#青蛙跳台阶问题
 def stage(n):
     if n <= 1:
         return 1

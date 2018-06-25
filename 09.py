@@ -8,10 +8,11 @@ class TwoStackQueue:
         while self.stackPush:
             data = self.stackPush.pop()
             self.stackPop.append(data)
-        if self.stackPop is None:
+        if not self.stackPop:
             raise Exception("queue is empty")
         head = self.stackPop.pop()
         return head
 Queue = TwoStackQueue()
 Queue.appendTail(7)
 print(Queue.deleteHead())
+

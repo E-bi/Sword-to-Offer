@@ -8,7 +8,7 @@ def Find(tar,s):
     len_mat = len(s)
     R = 0 #行
     C = len_mat-1 #列
-    RigTop = s[R][C]
+    RigTop = s[R][C] #右上角的元素值
     if RigTop == tar:
         return True
     while RigTop != tar:

@@ -1,3 +1,4 @@
+#旋转数组的最小数字
 import math
 def minNum(nums):
     len_nums = len(nums)

@@ -1,5 +1,4 @@
 #重建二叉树   未完成
-
 class Node:
     def __init__(self,data):
         self.data = data
@@ -11,10 +10,8 @@ class tree:
     def find_root(preorder,midorder):
         #前序遍历的第一个数字是根节点的值
         #判断是不是长度为1的
-        
         self.add(FirstRoot)
         self.add()
-        
         midorder_left = midorder[:FirstRoot_index_in_midorder]
         find_root(preorder,midorder_left)
         midorder_right = midorder[FirstRoot_index_in_midorder+1:]
