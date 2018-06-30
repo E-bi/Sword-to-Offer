@@ -7,7 +7,7 @@ class ListNode:
 def findSame(ListNode1,ListNode2):
     head1 = ListNode1.head 
     head2 = ListNode2.head
-    while head1 is not None & head2 is not None:
+    while head1 & head2:
         if head1 == head2:
             return head1
         else:

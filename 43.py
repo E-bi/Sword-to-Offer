@@ -6,5 +6,5 @@ def count1(num):
         count_1 = list_i.count('1')
         count = count + count_1
     return count
-num = 21235
+num = 2123
 print(count1(num+1))

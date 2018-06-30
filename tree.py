@@ -25,7 +25,7 @@ class tree:
                 else:
                     q.append(pop_node.left)
                     q.append(pop_node.right)
-                    
+
     def traverse(self): #层次遍历/宽度优先遍历
         if self.root is None:
             return None
@@ -54,7 +54,7 @@ class tree:
         left_data = self.inorder(root.left)
         right_data = self.inorder(root.right)
         return left_data + result + right_data
-    def postorder(self,root):  #中序遍历
+    def postorder(self,root):  #后序遍历
         if root is None:
             return []
         result = [root.data]
@@ -68,3 +68,5 @@ print('层序遍历:',t.traverse())
 print('先序遍历:',t.preorder(t.root))
 print('中序遍历:',t.inorder(t.root))
 print('后序遍历:',t.postorder(t.root))
+
+基金会

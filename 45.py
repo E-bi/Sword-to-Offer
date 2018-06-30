@@ -1,9 +1,17 @@
-def min_num(s):
-    len_s = len(s)
-    min = s[0][0]
-    for i in range(len_s):
-        if s[i][0]>
-        print(s[i][0])
-
+tar = []
+def Permutation(s,start):
+    if not s:
+        return
+    if s[start] == '\n':
+        global tar
+        tar.append(int(''.join(s[:start])))
+    else:
+        for j in range(start,len(s)-1):
+            s[j], s[start] = s[start], s[j]
+            Permutation(s,start+1)
+            s[j], s[start] = s[j], s[start]
 s=['3','32','321']
-print(min_num(s))
+s += ['\n']
+Permutation(s,0)
+print(min(tar))
+
