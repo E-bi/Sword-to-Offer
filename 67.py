@@ -1,7 +1,6 @@
 def IsNum(char):
     tar = ['1','2','3','4','5','6','7','8','9','0']
-    if char in tar:
-        return True
+    return char in tar
 def StrToInt(s):
     if not s:
         return

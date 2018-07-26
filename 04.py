@@ -6,7 +6,7 @@
 '''
 def Find(tar,s):
     len_mat = len(s)
-    R = 0 #行
+    R = 0 #起始行数
     C = len_mat-1 #列
     RigTop = s[R][C] #右上角的元素值
     if RigTop == tar:
@@ -24,6 +24,6 @@ def Find(tar,s):
             RigTop = s[R][C]
         if RigTop == tar:
             return True
-tar = 5
+tar = 0
 s = [[1,2,8,9],[2,4,9,12],[4,7,10,13],[6,8,11,15]]
 print(Find(tar,s))

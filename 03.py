@@ -6,7 +6,7 @@ def duplicate(s):
     elif len_s == 1:
         return s
     else:
-        for index in range(len_s):
+        for index in range(len_s-1):
             buff = s[index+1:]
             if s[index] in buff:
                 return s[index]

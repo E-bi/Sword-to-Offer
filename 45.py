@@ -10,8 +10,11 @@ def Permutation(s,start):
             s[j], s[start] = s[start], s[j]
             Permutation(s,start+1)
             s[j], s[start] = s[j], s[start]
+def MinNum(s):
+    s += ['\n']
+    Permutation(s,0op)
+    return min(tar)
 s=['3','32','321']
-s += ['\n']
-Permutation(s,0)
-print(min(tar))
+print(MinNum(s))
+
 

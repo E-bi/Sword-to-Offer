@@ -19,7 +19,7 @@ def ReplaceBlank2(s):
     return ''.join(buff_s)
 
 
-s="we are happy"
+s="whappy"
 print(ReplaceBlank1(s))
 print(ReplaceBlank2(s))
     

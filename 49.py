@@ -4,7 +4,7 @@ def GetUglyNumber(number):
     while number %3 == 0:
         number = number/3
     while number %5 == 0:
-        number = number/3
+        number = number/5
     return number==1
 count = 1500
 for i in range(1,count+1):

@@ -10,9 +10,7 @@ def MirrorRecursively(pNode):
         return 
     if pNode.left == None & pNode.right == None:
         return
-    pTemp = pNode.left
-    pNode.left = pNode.right
-    pNode.right = pTemp
+    pNode.left,pNode.right = pNode.right,pNode.left
     if pNode.left:
         MirrorRecursively(pNode.left)
     if pNode.right:

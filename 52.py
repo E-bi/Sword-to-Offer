@@ -2,8 +2,8 @@ class ListNode:
     def __init__(self,data,_next=None):
         self.data =data
         self._next = _next
-    def __repr__(self,data):
-        return self.data
+    def __repr__(self):
+        return str(self.data)
 def findSame(ListNode1,ListNode2):
     head1 = ListNode1.head 
     head2 = ListNode2.head

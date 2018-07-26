@@ -5,7 +5,7 @@ def IsContinuous(numbers):
     #若其中有对子则返回
     for i in range(len(numbers)-1):
         if numbers[i] in numbers[i+1:] and numbers[i] != 0:
-            return
+            return False
     count_0 = 0
     count_inter = 0
     #找出数组中0的个数
