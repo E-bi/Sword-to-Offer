@@ -67,7 +67,27 @@ class ChainTable:
             num.append(node)
             node = node._next
         return num
-
+def delete(Head,index):
+    if index <0 or index >length:
+        print('超出索引长度')
+        return
+    if index == 0:
+        Head = Head._next
+        return 
+    j = 0
+    '''
+    prenode用来定义前导节点
+    node用来定义当前结点
+    '''
+    prenode = Head
+    node = Head 
+    while node._next and j < index:#当下一个节点存在，且j小于index
+        prenode = node
+        node = node._next
+        j += 1
+    if j == index:
+        prenode._next = node._next#将当前节点的前导节点替换为当前节点的下一个节点的前导节点，
+        #即相当于将当前节点删除
 
 Chain = ChainTable()
 for i in range(5):

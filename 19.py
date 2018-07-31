@@ -2,9 +2,3 @@
 #有
 def Reg(s,tar):
     if s.startswith('.'):
-
-
-
-s = '.aa'
-tar = 'aaa'
-print()

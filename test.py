@@ -1,9 +1,13 @@
-def bubbleSort(nums):
-    for index in range(len(nums)-1,0,-1):
-        for indexs in range(index):
-            if nums[indexs]>nums[indexs+1]:
-                nums[indexs],nums[indexs+1] = nums[indexs+1],nums[indexs]
-    return nums
-
-nums = [4,2,1,5,3]
-print(bubbleSort(nums))
+def isNum(s):
+    numList = ['1','2','3','4','5','6','7','8','9','0']
+    if s.startswith('+') or s.startswith('-'):
+        s.pop(0)
+    elif s.startswith('.'):
+        s.pop(0)
+    else:
+        if s[0] not in numList:
+            return False
+        while s[0] in numList:
+            s.pop(0)
+        if s.startswith('.'):
+            s.pop(0)
