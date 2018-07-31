@@ -10,9 +10,9 @@ def HasSubtree(pRoot1,pRoot2):
     if pRoot1 != None & pRoot2 != None:
         if pRoot1.data == pRoot2.data:
             result = DoesTree1HaveTree2(pRoot1,pRoot2)
-        if != result:
+        if not result:
             result = HasSubtree(pRoot1.left, pRoot2)
-        if != result:
+        if not result:
             result = HasSubtree(pRoot1.right, pRoot2)
     return result
 

@@ -13,11 +13,11 @@ def Merge(pHead1,pHead2):
     elif pHead2 == None:
         return pHead1
     pMergedHead = None
-    if pHead1._next < pHead2._next:
+    if pHead1.data < pHead2.data:
         pMergedHead = pHead1
-        pMergedHead._next = Merge(pHead1._next,pHead2._next)
+        pMergedHead._next = Merge(pHead1._next,pHead2)
     else:
         pMergedHead = pHead2
-        pMergedHead._next = Merge(pHead1._next, pHead2._next)
+        pMergedHead._next = Merge(pHead1, pHead2._next)
     return pMergedHead
 

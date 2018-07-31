@@ -2,7 +2,7 @@ class TreeNode:
     def __init__(self,data):
         self.data = data
         self.left = None
-        self.right = None
+        self.right = None   
 pNode = TreeNode(pNode)
 pTemp = TreeNode(pTemp)
 def MirrorRecursively(pNode):
