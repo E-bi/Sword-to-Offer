@@ -174,9 +174,9 @@ for i in range(10):
     chainTable.add(i)
 print(chainTable.getIndex(1))
 print(chainTable.print_chain())
+
+
 #若需按照倒序打印，只需按照列表的倒序打印的方法即可
-
-
 def PrintChain(head):
     num = []
     node = head

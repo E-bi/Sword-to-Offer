@@ -11,15 +11,15 @@ def ReplaceBlank1(s):
 #不用函数库
 def ReplaceBlank2(s):
     buff_s = []
-    for char in s:
-        if char is not ' ':
-            buff_s.append(char)
+    for char in s:    
         if char is ' ':
             buff_s.append('%20')
+        else:
+            buff_s.append(char)
     return ''.join(buff_s)
 
 
-s="whappy"
+s="wh    appy"
 print(ReplaceBlank1(s))
 print(ReplaceBlank2(s))
     
