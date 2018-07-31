@@ -27,6 +27,3 @@ def fib_sec(n):
             fib0 = fib1
             fib1 = fib2
         return fib2
-    
-n=4
-print(fib_sec(n))

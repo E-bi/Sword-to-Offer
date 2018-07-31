@@ -6,12 +6,10 @@ class TwoStackQueue:
 
     def deleteHead(self):
         while self.stackPush:
-            data = self.stackPush.pop()
-            self.stackPop.append(data)
+            self.stackPop.append(self.stackPush.pop())
         if not self.stackPop:
             raise Exception("queue is empty")
-        head = self.stackPop.pop()
-        return head
+        return self.stackPop.pop()
 Queue = TwoStackQueue()
 Queue.appendTail(7)
 print(Queue.deleteHead())

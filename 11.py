@@ -19,8 +19,7 @@ def minNum(nums):
             if nums[left] < nums[right]:
                 return 0
             else:
-                # 如果中间的元素大于左边的
-                if nums[mid] >= nums[left]:
+                if nums[mid] >= nums[left]:   # 如果中间的元素大于左边的
                     left = mid
                     if nums[left+1] <= nums[left]:
                        return left+1
