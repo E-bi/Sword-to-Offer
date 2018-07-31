@@ -1,6 +1,6 @@
 #方法1
 def find_1(num):
-    len_num = 64 #若不设定左移次数，系统将一直左移
+    len_num = 65 #若不设定左移次数，系统将一直左移
     times = 0
     count = 0
     pat =1

@@ -14,8 +14,3 @@ def Power(base,exponent):
         return result
 
 print(Power(2,3))
-print(Power(-2,3))
-print(Power(2,0))
-print(Power(2,-3))
-print(Power(0,3))
-print(4%3)
