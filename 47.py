@@ -3,7 +3,7 @@ def GetMax(mat):
         return
     C = len(mat)
     R = C
-    #buff表示从左上角走到位置为(i,j)出最大路径的和
+    #buff表示从左上角走到位置为(i,j)处最大路径的和
     buff = [[0 for i in range(len(mat))] for j in range(len(mat[0]))] 
     buff[0][0] = mat[0][0]
     #先将第一行第一列的情况算出来
