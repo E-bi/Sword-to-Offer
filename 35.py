@@ -3,7 +3,7 @@ class ComplexNode:
         self.data = data
         self.m_pNext = m_pNext
         self.m_pSibling = m_pSibling
-
+                
 class pHead(ComplexNode):
     pass
 def ComplexListNodeClone(pHead):

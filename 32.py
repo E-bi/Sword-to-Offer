@@ -42,7 +42,7 @@ class Tree(object):
         '''
         分行从上到下打印二叉树
         '''
-        if self.root is None:
+        if self.root == None:
             return None
         q = [self.root]
         next_level = 0 #下一层的节点数
@@ -50,10 +50,10 @@ class Tree(object):
         while q != []:
             pop_node = q.pop(0)
             print(pop_node.data,end=" ")
-            if pop_node.left is not None:
+            if pop_node.left != None:
                 q.append(pop_node.left)
                 next_level += 1
-            if pop_node.right is not None:
+            if pop_node.right != None:
                 q.append(pop_node.right)
                 next_level += 1
             toBePrinted -= 1
@@ -66,7 +66,7 @@ class Tree(object):
         '''
         z字形打印二叉树
         '''
-        if self.root is None:
+        if self.root == None:
             return None
         levels = [[],[]]
         current = 0

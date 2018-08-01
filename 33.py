@@ -1,4 +1,4 @@
-def VerifySquenceOfBST(s):
+def VerifySequenceOfBST(s):
     if s is None:
         return False
     root = s[-1]
@@ -13,11 +13,11 @@ def VerifySquenceOfBST(s):
     #利用递归判断左子树是不是符合二叉搜索树
     left = True
     if i>0:
-        left = VerifySquenceOfBST(s[:i])
+        left = VerifySequenceOfBST(s[:i])
     #利用递归判断右子树是不是符合二叉搜索树
     right = True
     if i < len(s)-1:
-        right = VerifySquenceOfBST(s[i:len(s)-1])
+        right = VerifySequenceOfBST(s[i:len(s)-1])
     return left&right
 
 

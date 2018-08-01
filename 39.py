@@ -8,7 +8,7 @@ def MoreThanHalfNum(a):
     else:
         tar = len_a/2
         start = a[0]
-        count = 0
+        count = 1
         for num in a[1:]:
             if num == start:
                 count +=1
@@ -16,7 +16,7 @@ def MoreThanHalfNum(a):
                     print(num)
                     break
             else:
-                count = 0
+                count = 1
                 start = num
 a = [1,2,3,4,2,3,2,2,4,3,2,3,2,2,2,2,2,2,2,2,2,2]
 MoreThanHalfNum(a)
