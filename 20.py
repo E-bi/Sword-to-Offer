@@ -1,6 +1,5 @@
 def isNum(s):
     index = 0
-    #
     if s[0] == '+' or s[0] == '-':
         index += 1
         buff = index
