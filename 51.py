@@ -5,7 +5,7 @@ def ReverseNum(s):
         for j in range(len(new_s)):
             buff += [[s[i],new_s[j]]]
     return buff
-s = [7,6,5,4]
-s.sort()
-s.reverse()
+s = [7,6,5,4,9]
+s.sort(reverse=True)
+
 print(ReverseNum(s))

@@ -1,9 +1,9 @@
 def FindNumsAppearOnce(s):
-    s.sort()
-    for i in range(0,len(s)-1,2):
-        if s[i] != s[i+1]:
-            return s[i],s[i+1]
-
+    list_s = list(set(s))
+    for i in range(0,len(s)):
+        if s[i] in s[i+1:]:
+            list_s.remove(s[i])
+    return list_s
 
 
 

@@ -2,9 +2,9 @@ def FindContinuousSequence(s):
     total = 0
     buff = []
     start = 1
+    if s == 1:
+        return [1]
     while start:
-        if start == s:
-            return buff
         for i in range(start,s):
             total = total + i
             if total == s:

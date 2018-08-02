@@ -5,5 +5,5 @@ def FindNumbersWithSum(s,total):
             return s[i],tar
 
 s=[1,2,4,67,11,15]
-total = 15
+total = 18
 print(FindNumbersWithSum(s, total))
