@@ -23,8 +23,6 @@ def hasPathCore(mat,R,C,row,col,path,pathLength,visited):
             pathLength -= 1
             visited[row][col] = False
     return hasPath
-
-
 path = 'bfce'
 mat = [['a','b','t','g'],['c','f','c','s'],['j','d','e','h']]
 print(hasPath(path,mat))

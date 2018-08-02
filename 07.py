@@ -15,6 +15,6 @@ def ConstructCore(Preorder,Inorder):
         return TreeNode(Preorder[0])
     else:
         root = TreeNode(Preorder[0])
-        root.left = ConstructCore(Preorder[1:Inorder[Inorder.index(Preorder[0])+1]],Inorder[:Inorder.index(Preorder[0])])
+        root.left = ConstructCore(Preorder[1:Inorder.index(Preorder[0])+1],Inorder[:Inorder.index(Preorder[0])])
         root.right = ConstructCore(Preorder[Inorder.index(Preorder[0])+1:],Inorder[Inorder.index(Preorder[0])+1:])
     return root

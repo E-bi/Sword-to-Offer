@@ -7,7 +7,7 @@ pRoot1 = TreeNode(pRoot1)
 pRoot2 = TreeNode(pRoot2)
 def HasSubtree(pRoot1,pRoot2):
     result = False
-    if pRoot1 != None & pRoot2 != None:
+    if pRoot1 != None and pRoot2 != None:
         if pRoot1.data == pRoot2.data:
             result = DoesTree1HaveTree2(pRoot1,pRoot2)
         if not result:

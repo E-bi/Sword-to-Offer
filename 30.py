@@ -19,7 +19,7 @@ class StackWithMin():
         if self.stack_min == None or self.stack == None:
             raise Exception("stack is empty")
         pop_num = self.stack_min.pop()
-        #self.stack.remove(pop_num)
+        self.stack.remove(pop_num)
         return pop_num
 
 a = StackWithMin()

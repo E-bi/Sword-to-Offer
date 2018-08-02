@@ -21,5 +21,5 @@ def FindRotate(s):
             if s[start] < s[end]:
                 return s[0]
 
-nums = [1, 2, 3, 4, 5, 6, 7]
+nums = [4, 5, 6, 7,1,2,3]
 print(FindRotate(nums))

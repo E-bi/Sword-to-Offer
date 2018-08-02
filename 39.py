@@ -8,15 +8,16 @@ def MoreThanHalfNum(a):
     else:
         tar = len_a/2
         start = a[0]
-        count = 1
-        for num in a[1:]:
+        count = 0
+        buff = []
+        for num in a:
             if num == start:
                 count +=1
-                if count>tar:
-                    print(num)
-                    break
+                if count>tar and num not in buff:
+                    buff.append(num)
             else:
                 count = 1
                 start = num
+        print(buff)
 a = [1,2,3,4,2,3,2,2,4,3,2,3,2,2,2,2,2,2,2,2,2,2]
 MoreThanHalfNum(a)
