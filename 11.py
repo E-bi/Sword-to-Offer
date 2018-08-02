@@ -1,45 +1,25 @@
 # 旋转数组的最小数字
-import math
-
-
-def minNum(nums):
-    len_nums = len(nums)
-    if len_nums == 1:
-        return 0
-    elif len_nums == 0:
-        return -1
+def FindRotate(s):
+    len_s = len(s)
+    if len_s <= 0:
+        return None
+    if len_s == 1:
+        return s
     else:
-        left = 0
-        right = len_nums-1
+        start = 0
+        end = len_s-1
+        mid = (start+end)//2
         while True:
-            mid = math.floor((right+left)/2)
-            # 如果出现都相等的情况
-            if nums[right] == nums[left]:
-                return FindByOrder(nums)
-            if nums[left] < nums[right]:
-                return 0
+            if s[start]> s[mid]:
+                end = mid
+                mid = (start+end)//2
             else:
-                if nums[mid] >= nums[left]:   # 如果中间的元素大于左边的
-                    left = mid
-                    if nums[left+1] <= nums[left]:
-                       return left+1
-                # 如果中间的元素小于右边的
-                if nums[mid] <= nums[right]:
-                    right = mid
-                    if nums[right-1] > nums[right]:
-                        return mid
-
-
-def FindByOrder(nums):
-    min_num = nums[0]
-    for num in nums:
-        if num < min_num:
-            min_num = num
-    return min_num
+                start = mid
+                mid = (start+end)//2
+            if start == end-1:
+                return s[end]
+            if s[start] < s[end]:
+                return s[0]
 
 nums = [1, 2, 3, 4, 5, 6, 7]
-mi = minNum(nums)
-if mi == -1:
-    print('False')
-else:
-    print(nums[mi])
+print(FindRotate(nums))
