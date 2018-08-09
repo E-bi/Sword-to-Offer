@@ -16,10 +16,10 @@ def MeetingNode(pHead):
     if pSlow == None:
         return None
     pFast = pSlow._next
-    while pFast != None & pSlow != None:
+    while pFast != None and pSlow != None:
         if pSlow == pFast:
             return pFast
-        pSlow == pSlow._next
+        pSlow = pSlow._next
         pFast = pFast._next
         if pFast != None:
             pFast = pFast._next

@@ -23,4 +23,4 @@ def DoesTree1HaveTree2(pRoot1,pRoot2):
         return False
     if pRoot1.data != pRoot2.data:
         return False
-    return DoesTree1HaveTree2(pRoot1.left,pRoot2.left) & DoesTree1HaveTree2(pRoot1.right,pRoot2.right)
+    return DoesTree1HaveTree2(pRoot1.left,pRoot2.left) and DoesTree1HaveTree2(pRoot1.right,pRoot2.right)

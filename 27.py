@@ -8,7 +8,7 @@ pTemp = TreeNode(pTemp)
 def MirrorRecursively(pNode):
     if pNode ==None:
         return 
-    if pNode.left == None & pNode.right == None:
+    if pNode.left == None and pNode.right == None:
         return
     pNode.left,pNode.right = pNode.right,pNode.left
     if pNode.left:
