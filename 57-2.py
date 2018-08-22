@@ -5,6 +5,8 @@ def FindContinuousSequence(s):
     if s == 1:
         return [1]
     while start:
+        if start == s:
+            return buff
         for i in range(start,s):
             total = total + i
             if total == s:
@@ -15,6 +17,7 @@ def FindContinuousSequence(s):
             elif i == s-1:
                 total = 0
                 start = start + 1
+    
 
 s = 15
 print(FindContinuousSequence(s))
