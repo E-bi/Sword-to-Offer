@@ -1,4 +1,5 @@
 #实现冒泡排序
+#时间复杂度O(n^2)
 def bubbleSort(alist):
     if not alist:
         return None
