@@ -1,6 +1,18 @@
 # 算法汇总
 ---
 
+### 给定一个没有重复数字的序列，返回其所有可能的全排列。
+```py
+from typing import List
+import itertools
+def permute(nums: List[int]) -> List[List[int]]:
+        return list(itertools.permutations(nums))
+nums = [1,2,3]
+permute(nums)
+```
+
+
+
 #### **面试题4：二维数组中的查找**
 题目：在一个二维数组中，每一行都按照从左到右递增的顺序排列，每一列都按照从上倒下递增的顺序排列。请完成一个函数，输入这样的一个二位数组和一个整数，判断数组中是否含有该整数。
 
