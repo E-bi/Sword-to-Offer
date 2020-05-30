@@ -11,3 +11,5 @@ def bubbleSort(alist):
 
 test = [1,42,4,3,4,2,5,7,4,3,2]
 print(bubbleSort(test))
+
+
