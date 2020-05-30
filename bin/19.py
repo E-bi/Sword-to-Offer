@@ -2,3 +2,4 @@
 #有
 def Reg(s,tar):
     if s.startswith('.'):
+        pass
