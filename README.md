@@ -1,7 +1,8 @@
 # 算法汇总
----
 
-### 给定一个没有重复数字的序列，返回其所有可能的全排列。
+[toc]
+
+#### 给定一个没有重复数字的序列，返回其所有可能的全排列。
 ```py
 from typing import List
 import itertools
@@ -10,7 +11,7 @@ def permute(nums: List[int]) -> List[List[int]]:
 nums = [1,2,3]
 permute(nums)
 ```
-TODO: 实现非导包
+
 
 #### **面试题4：二维数组中的查找**
 [代码](./bin/04.py)
